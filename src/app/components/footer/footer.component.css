@@ -1,0 +1,31 @@
+footer {
+    width: 100vw;
+    background-color: #54686f;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+small {
+    font-size: .5rem;
+}
+
+ul {
+    padding: 3vh 6vh 8vh 0vh;
+    display: inline-flex;
+}
+
+li {
+    list-style: none;
+    padding: 2vh;
+}
+
+img {
+    width: 2vw;
+}

@@ -1,0 +1,115 @@
+body {
+    width: 100vw;
+    height: 100%;
+    color: white;
+    background: url(../../../assets/biblioteca.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #585555d3;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    padding: 4vh;
+    font-size: 1.5rem;
+}
+
+h2 span {
+    font-size: 2rem;
+}
+
+.contenedor1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.item1 {
+    display: block;
+    padding: 2vh;
+}
+
+.item1contenedor {
+    width: 18vw;
+    height: 50vh;
+    padding: 1.5vh;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: 4px solid black;
+}
+
+.servicios {
+    width: 15vw;
+    height: 22vh;
+}
+
+.item1 figcaption {
+    font-size: .5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.item1 figcaption span {
+    font-size: .5rem;
+}
+
+.item1contenedor img {
+    width: 10vw;
+}
+
+.contenedor2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.item2contenedor1 {
+    width: 20vw;
+    height: 26vh;
+    padding: 2vh;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    border: 4px solid black;
+}
+
+.item2contenedor2 {
+    width: 20vw;
+    height: 26vh;
+    padding: 2vh;
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    border: 4px solid black;
+}
+
+.item2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item2 p {
+    font-size: .5rem;
+    padding: .5rem;
+}
+
+.news {
+    width: 12vw;
+}
+
