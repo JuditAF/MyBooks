@@ -1,3 +1,19 @@
+body {
+    width: 100vw;
+    height: 100%;
+    color: white;
+    background: url(../../../assets/biblioteca.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #585555d3;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .container {
     border-collapse: collapse;
     background-color: rgba(255, 255, 255, .18);
@@ -5,5 +21,85 @@
     width: 80%;
     margin: 8vh;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
+}
+
+.contentPerfil img {
+    width: 10vw;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.profile img {
+    width: 4vw;
+}
+
+.field {
+    display: inline;
+    border: 2px solid white;
+    width: 30vw;
+    height: 3rem;
+}
+
+.datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.datos p {
+    font-size: 2rem;
+}
+
+.contentModif h2 {
+    font-size: 2.5rem;
+    margin: 4vh;
+}
+
+.contentModif hr {
+    width: 80%;
+}
+
+.contentModif {
+    margin-left: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+form input {
+    width: 40vw;
+    margin: 2vh;
+    padding-left: 3vh;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+button {
+    font-size: 1rem;
+    margin: 2vh;
+    border-radius: 1rem;
+    width: 14vw;
+    cursor: pointer;
+    color: #068c74;
+}
+
+button:hover {
+    background-color: #068c74;
+    color: white;
 }
