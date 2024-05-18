@@ -1,0 +1,9 @@
+.container {
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, .18);
+    opacity: 80%;
+    width: 80%;
+    margin: 8vh;
+    display: flex;
+    flex-flow: column;
+}
