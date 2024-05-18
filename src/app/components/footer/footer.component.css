@@ -13,17 +13,21 @@ footer {
 }
 
 small {
+    padding-top: 3vh;
     font-size: .5rem;
 }
 
 ul {
-    padding: 3vh 6vh 8vh 0vh;
     display: inline-flex;
 }
 
 li {
     list-style: none;
-    padding: 2vh;
+    padding: 0 2vh;
+}
+
+a {
+   height: 6vh;
 }
 
 img {

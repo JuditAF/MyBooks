@@ -1,8 +1,8 @@
 #contenedor {
     width: 35vw;
-    color: black;
-    border: 1px solid black;
-    box-shadow: 1px 2px 2px 1px rgba(89, 87, 87, 0.2);
+    color: white;
+    border: 1px solid whitesmoke;
+    box-shadow: 1px 2px 2px 1px rgba(255, 255, 255, 0.18);
     margin: 4vh;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 h2 {
-    margin: 4vh;
+    margin: 5vh 0 2vh 0;
     font-size: 1.5rem;
 }
 
@@ -28,19 +28,31 @@ form {
     justify-content: right;
 }
 
-.field {
-    margin-bottom: 2rem;
+form .field {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 2vh;
 }
 
 .field input {
     width: 25vw;
-    height: 4vh;
     padding-left: 2rem;
     font-size: 1rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .button {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 2vh;
+    border-radius: 1rem;
+    width: 14vw;
+    cursor: pointer;
+    color: #068c74;
+}
+
+button:hover {
+    background-color: #068c74;
+    color: white;
 }
