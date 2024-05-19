@@ -17,6 +17,8 @@ body {
 h2 {
     padding: 4vh;
     font-size: 1.5rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
 }
 
 h2 span {
@@ -41,6 +43,7 @@ h2 span {
     border-radius: 1rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .item1contenedor {
@@ -87,23 +90,33 @@ h2 span {
 }
 
 .item2contenedor1 {
-    width: 20vw;
-    height: 26vh;
+    width: 28vw;
+    height: 36vh;
     padding: 2vh;
+    margin: 2vw;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--primer-color);
+    align-items: center;
+    background-color: rgb(60, 124, 147, 0.8);
     border: 4px solid var(--fifth-color);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .item2contenedor2 {
-    width: 20vw;
-    height: 26vh;
+    width: 28vw;
+    height: 36vh;
     padding: 2vh;
+    margin: 2vw;
     display: flex;
     justify-content: flex-start;
-    background-color: var(--primer-color);
+    align-items: center;
+    background-color: rgb(60, 124, 147, 0.8);
     border: 4px solid var(--fifth-color);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .item2 {
@@ -115,9 +128,15 @@ h2 span {
 .item2 p {
     font-size: .5rem;
     padding: .5rem;
+    letter-spacing: .1rem;
+    cursor: pointer;
 }
 
 .news {
-    width: 12vw;
+    width: 18vw;
+    height: 20vh;
+    border-radius: 1rem;
+    margin-right: 1vw;
+    margin-left: 1vw;
 }
 
