@@ -1,8 +1,8 @@
 #contenedor {
     width: 35vw;
-    color: white;
-    border: 1px solid whitesmoke;
-    box-shadow: 1px 2px 2px 1px rgba(255, 255, 255, 0.18);
+    color: var(--primer-color);
+    border: 1px solid var(--primer-color);
+    box-shadow: 1px 2px 2px 1px var(--second-color);
     margin: 4vh;
     display: flex;
     flex-direction: column;
@@ -49,10 +49,10 @@ form .field {
     border-radius: 1rem;
     width: 14vw;
     cursor: pointer;
-    color: #068c74;
+    color: var(--fourth-color);
 }
 
 button:hover {
-    background-color: #068c74;
-    color: white;
+    background-color: var(--fourth-color);
+    color: var(--primer-color);
 }

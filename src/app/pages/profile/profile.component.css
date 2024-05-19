@@ -1,7 +1,7 @@
 body {
     width: 100vw;
     height: 100%;
-    color: white;
+    color: var(--primer-color);
     background: url(../../../assets/biblioteca.jpeg);
     background-position: center;
     background-repeat: no-repeat;
@@ -24,24 +24,10 @@ body {
     flex-flow: row;
 }
 
-.contentPerfil img {
-    width: 10vw;
-    border: 2px solid white;
-    border-radius: 50%;
-}
-
-.profile img {
-    width: 4vw;
-}
-
-.field {
-    display: inline;
-    border: 2px solid white;
-    width: 30vw;
-    height: 3rem;
-}
-
-.datos {
+.contentPerfil {
+    width: 100%;
+    padding-top: 1.5vh;
+    padding-bottom: 3.5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,17 +35,87 @@ body {
     align-items: center;
 }
 
+.perfilImg {
+   padding-top: 4vh;
+}
+
+.perfilImg img {
+    width: 14vw;
+    border: 2px solid var(--primer-color);
+    border-radius: 50%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile img {
+    width: 4vw;
+    margin-left: 2vw;
+}
+
+.nomCompleto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nomCompleto h2 {
+    width: 30vw;
+    padding-left: 2vw;
+    font-weight: 100;
+    font-size: 1.6rem;
+}
+
+.nomCompleto hr {
+    width: 92%;
+    padding-left: 1.8vw;
+    size: 2px;
+}
+
+.datos {
+    width: 38vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.datosNombre {
+    width: 100%;
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.datosApellidos {
+    width: 100%;
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.datosCorreo {
+    width: 100%;
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .datos p {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-left: 2vw;
 }
 
-.contentModif h2 {
-    font-size: 2.5rem;
-    margin: 4vh;
-}
-
-.contentModif hr {
-    width: 80%;
+.field {
+    border: 2.5px solid var(--primer-color);
+    width: 20vw;
+    height: 2.5rem;
+    margin-right: 2vw;
 }
 
 .contentModif {
@@ -71,6 +127,15 @@ body {
     align-items: center;
 }
 
+.contentModif h2 {
+    font-size: 2.5rem;
+    margin: 4vh;
+}
+
+.contentModif hr {
+    width: 80%;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -80,14 +145,14 @@ form {
 }
 
 form input {
-    width: 40vw;
+    width: 35vw;
     margin: 2vh;
     padding-left: 3vh;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 button {
@@ -96,10 +161,10 @@ button {
     border-radius: 1rem;
     width: 14vw;
     cursor: pointer;
-    color: #068c74;
+    color: var(--fourth-color);
 }
 
 button:hover {
-    background-color: #068c74;
-    color: white;
+    background-color: var(--fourth-color);
+    color: var(--primer-color);
 }

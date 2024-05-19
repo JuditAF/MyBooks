@@ -1,7 +1,7 @@
 
 body {
     width: 100vw;
-    color: white;
+    color: var(--primer-color);
     background: url(../../../assets/biblioteca.jpeg);
     background-position: center;
     background-repeat: no-repeat;
