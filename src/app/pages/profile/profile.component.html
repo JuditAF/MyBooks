@@ -13,7 +13,7 @@
             <div class="profile">
                 <img src="../../../assets/book.png" alt="">
                 <div class="nomCompleto">
-                    <h2>Nombre Completo</h2>
+                    <h2>Nombre Completo: {{myUser.nombreCompleto()}}</h2>
                     <hr>
                 </div>
             </div>
@@ -23,21 +23,21 @@
                 <div class="datosNombre">
                     <p>Nombre</p>
                     <div class="field">
-                        <h3 id="nombre"></h3>
+                        <h3 id="nombre">{{myUser.name}}</h3>
                     </div>
                 </div>
 
                 <div class="datosApellidos">
                     <p>Apellidos</p>
                     <div class="field">
-                        <h3 id="apellidos"></h3>
+                        <h3 id="apellidos">{{myUser.last_name}}</h3>
                     </div>
                 </div>
 
                 <div class="datosCorreo">
                     <p>Correo</p>
                     <div class="field">
-                        <h3 id="correo"></h3>
+                        <h3 id="correo">{{myUser.email}}</h3>
                     </div>
                 </div>
 
@@ -53,10 +53,10 @@
 
             <form action="">
 
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Apellidos">
-                <input type="text" placeholder="Correo">
-                <input type="text" placeholder="Url">
+                <input type="text" placeholder="Nombre" value="{{myUser.name}}">
+                <input type="text" placeholder="Apellidos" value="{{myUser.last_name}}">
+                <input type="text" placeholder="Correo" value="{{myUser.email}}">
+                <input type="text" placeholder="Url" value="{{myUser.photo}}">
                 <div class="boton">
                     <button type="button" onclick="modificar()">Modificar</button>
                 </div>
