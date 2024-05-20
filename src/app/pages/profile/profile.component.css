@@ -65,7 +65,7 @@ body {
     width: 30vw;
     padding-left: 2vw;
     font-weight: 100;
-    font-size: 1.6rem;
+    font-size: .7rem;
 }
 
 .nomCompleto hr {
@@ -87,6 +87,7 @@ body {
     padding-top: 2vh;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -95,6 +96,7 @@ body {
     padding-top: 2vh;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -103,18 +105,19 @@ body {
     padding-top: 2vh;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
 .datos p {
-    font-size: 1.5rem;
+    font-size: .5rem;
     margin-left: 2vw;
 }
 
 .field {
     border: 2.5px solid var(--primer-color);
     width: 22vw;
-    height: 2rem;
+    height: 1.1rem;
     margin-right: 2vw;
 }
 
@@ -128,7 +131,7 @@ body {
 }
 
 .contentModif h2 {
-    font-size: 2.5rem;
+    font-size: .9rem;
     font-weight: 100;
     letter-spacing: .1rem;
     margin: 4vh;
@@ -151,7 +154,7 @@ form input {
     width: 33vw;
     margin: 2vh;
     padding: .25rem 1rem;
-    font-size: 1.5rem;
+    font-size: .5rem;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -163,11 +166,11 @@ form input:nth-child(1) {
 }
 
 button {
-    font-size: 1.2rem;
+    font-size: .5rem;
     letter-spacing: .1rem;
-    margin: 8vh;
-    padding: .6rem 1.1rem;
-    border-radius: 1rem;
+    margin: 12vh;
+    padding: .4rem .6rem;
+    border-radius: .8rem;
     width: 14vw;
     cursor: pointer;
     color: var(--fourth-color);

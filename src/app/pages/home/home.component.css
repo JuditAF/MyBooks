@@ -15,14 +15,16 @@ body {
 }
 
 h2 {
-    padding: 4vh;
-    font-size: 1.5rem;
+    font-size: .9rem;
+    padding: 5vh;
     font-weight: 100;
     letter-spacing: .1rem;
 }
 
 h2 span {
-    font-size: 2rem;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
 }
 
 .contenedor1 {
@@ -32,7 +34,7 @@ h2 span {
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
-    margin: 0 6vh 8vh 6vh;
+    margin: 0 8vh 9vh 8vh;
 }
 
 .item1 {
@@ -40,7 +42,7 @@ h2 span {
     padding: 2vh;
     background-color: rgb(255, 255, 255, 0.6);
     border: 4px solid var(--fifth-color);
-    border-radius: 1rem;
+    border-radius: .8rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
     cursor: pointer;
@@ -57,17 +59,18 @@ h2 span {
 .servicios {
     width: 24vw;
     height: 22vh;
+    border-radius: .5rem;
 }
 
 .item1 figcaption {
-    font-size: 1rem;
+    font-size: .5rem;
     color: var(--fifth-color);
     display: flex;
     justify-content: center;
 }
 
 .item1 figcaption span {
-    font-size: 1rem;
+    font-size: .5rem;
     color: var(--fifth-color);
     display: flex;
     justify-content: center;
@@ -99,7 +102,7 @@ h2 span {
     align-items: center;
     background-color: rgb(60, 124, 147, 0.8);
     border: 4px solid var(--fifth-color);
-    border-radius: 1rem;
+    border-radius: .8rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
@@ -114,7 +117,7 @@ h2 span {
     align-items: center;
     background-color: rgb(60, 124, 147, 0.8);
     border: 4px solid var(--fifth-color);
-    border-radius: 1rem;
+    border-radius: .8rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
@@ -133,9 +136,9 @@ h2 span {
 }
 
 .news {
-    width: 18vw;
-    height: 20vh;
-    border-radius: 1rem;
+    width: 20vw;
+    height: 24vh;
+    border-radius: .5rem;
     margin-right: 1vw;
     margin-left: 1vw;
 }
