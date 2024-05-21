@@ -10,6 +10,7 @@ import { FormRegisterComponent } from './components/form-register/form-register.
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { LibrosComponent } from './pages/libros/libros.component';
 
 
 
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     FormRegisterComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    LibrosComponent
   ],
   imports: [
     BrowserModule,
