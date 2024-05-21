@@ -13,3 +13,98 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.cardContainer {
+    width: 100vw;
+    font-size: .5rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 8vh;
+}
+
+.card {
+    width: 7rem;
+    border: 3px solid var(--primer-color);
+    border-radius: .8rem;
+    box-shadow: 10px 5px 5px black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    margin: 0 8vh 9vh 8vh;
+}
+
+.cardHeader {
+    width: 100%;
+    background-color: var(--primer-color);
+    border-radius: .7rem .7rem 0 0;
+    color: var(--fifth-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+.cardHeader p {
+    font-size: .3rem;
+    margin-bottom: .2rem;
+}
+
+.imgLibro {
+    width: 16vw;
+    border: .5px dashed var(--fourth-color);
+}
+
+h2 {
+    font-size: .4rem;
+}
+
+h3 {
+    font-size: .3rem;
+    margin: .2rem;
+}
+
+hr {
+    width: 90%;
+    size: .5px;
+    color: var(--fifth-color)
+}
+
+.cardMain {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+span {
+    font-size: .4rem;
+}
+
+p {
+    font-size: .4rem;
+}
+
+.cardBuy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: .5rem;
+}
+
+.cardBuy p {
+    margin-bottom: .3rem;
+}
+
+.button {
+    width: 4rem;
+    font-size: .5rem;
+}
