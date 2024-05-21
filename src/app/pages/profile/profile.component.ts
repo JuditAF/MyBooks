@@ -23,5 +23,5 @@ public modificar (nuevoNombre: HTMLInputElement) {
   console.log(this.myUser.name);
 
 }
-// , nuevoApellido: HTMLInputElement, nuevoEmail: HTMLInputElement, nuevoFoto: HTMLInputElement
+
 }

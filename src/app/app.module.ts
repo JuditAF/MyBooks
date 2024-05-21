@@ -21,8 +21,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     FormRegisterComponent,
     RegisterComponent,
-    ProfileComponent,
- 
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

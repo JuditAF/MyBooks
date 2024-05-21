@@ -12,13 +12,4 @@ export class User {
     public nombreCompleto (): string {
         return this.name + " " + this.last_name;
     }
-
-    // public changeImage (): string {
-    //     imgProfile.src = 
-    //     return
-    // }
-
-    // ngOnInit(): void {
-        
-    // }
 }
