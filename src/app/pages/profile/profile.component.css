@@ -26,21 +26,21 @@ body {
 
 .contentPerfil {
     width: 100%;
-    padding-top: 1.5vh;
     padding-bottom: 3.5vh;
+    padding-top: 12vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     align-items: center;
 }
 
 .perfilImg {
-   padding-top: 4vh;
+   padding: 0 2vh 6vh;
 }
 
 .perfilImg img {
-    width: 14vw;
+    width: 16vw;
     border: 2px solid var(--primer-color);
     border-radius: 50%;
 }
@@ -53,9 +53,11 @@ body {
 .profile img {
     width: 4vw;
     margin-left: 2vw;
+    margin-bottom: 4vh;
 }
 
 .nomCompleto {
+    margin-bottom: 4vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,6 +66,7 @@ body {
 .nomCompleto h2 {
     width: 30vw;
     padding-left: 2vw;
+    text-shadow:  rgb(223, 31, 165) 2px 5px;
     font-weight: 100;
     font-size: .7rem;
 }
@@ -115,10 +118,23 @@ body {
 }
 
 .field {
-    border: 2.5px solid var(--primer-color);
-    width: 22vw;
+    width: 26vw;
     height: 1.1rem;
     margin-right: 2vw;
+    padding-left: .5rem;
+    border: 2.5px solid var(--primer-color);
+    background-color: var(--third-color);
+    display: flex;
+    align-items: center;
+}
+
+.field h3 {
+    font-size: .4rem;
+    letter-spacing: .1rem;
+    font-weight: 100;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .contentModif {

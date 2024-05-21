@@ -7,14 +7,13 @@
         <div class="contentPerfil">
 
             <div class="perfilImg">
-                <img src="../../../assets/icono-perfil-persona.png" alt=""/>
+                <img src="{{myUser.photo}}" alt=""/>
             </div>
                 
             <div class="profile">
                 <img src="../../../assets/book.png" alt="">
                 <div class="nomCompleto">
-                    <h2>Nombre Completo</h2>
-                    <!-- {{myUser.nombreCompleto()}} -->
+                    <h2 title="Nombre Completo">{{myUser.nombreCompleto()}}</h2>
                     <hr>
                 </div>
             </div>
@@ -54,12 +53,13 @@
 
             <form action="">
 
-                <input type="text" placeholder="Nombre" value="{{myUser.name}}">
-                <input type="text" placeholder="Apellidos" value="{{myUser.last_name}}">
-                <input type="text" placeholder="Correo" value="{{myUser.email}}">
-                <input type="text" placeholder="Url" value="{{myUser.photo}}">
+                <input type="text" placeholder="Nombre" id="nameNew" #nuevoNombre ([(ngModel)]="myUser.name")]>
+                <input type="text" placeholder="Apellidos" id="lastName" #nuevoApellido ([(ngModel)]="myUser.last_name")]>
+                <input type="text" placeholder="Correo" id="mail" #nuevoEmail ([(ngModel)]="myUser.email")]>
+                <input type="text" placeholder="Url" id="Url" #nuevoFoto ([(ngModel)]="myUser.photo")]>
                 <div class="boton">
-                    <button type="button" onclick="modificar()">Modificar</button>
+                    <button type="button" (click)="modificar(nuevoNombre.value)">Modificar</button>
+                    <!-- , nuevoApellido.value, nuevoEmail.value, nuevoFoto.value -->
                 </div>
                 
             </form>
