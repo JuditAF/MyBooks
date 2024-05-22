@@ -16,10 +16,8 @@ constructor () {
   
 }
 
-public modificar (nuevoNombre: HTMLInputElement) {
-  
-  console.log(this.myUser.name);
-  this.myUser.name = nuevoNombre.value;
+public modificar (nuevoNombre: string, nuevoApellido: string, nuevoEmail: string, nuevaFoto: string) {
+  this.myUser = new User (3, nuevoNombre, nuevoApellido, nuevoEmail, nuevaFoto, "hola");
   console.log(this.myUser.name);
 
 }
