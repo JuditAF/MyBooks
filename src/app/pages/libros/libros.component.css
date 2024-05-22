@@ -56,12 +56,17 @@ body {
 }
 
 .imgLibro {
-    width: 16vw;
+    width: 12vw;
     border: .5px dashed var(--fourth-color);
 }
 
 h2 {
     font-size: .4rem;
+    cursor: pointer;
+}
+
+h2:hover {
+    color: red;
 }
 
 h3 {
@@ -107,4 +112,16 @@ p {
 .button {
     width: 4rem;
     font-size: .5rem;
+    border: 2px solid var(--fourth-color);
+    border-radius: .4rem;
+    background-color: var(--second-color);
+    color: var(--primer-color);
+    font-weight: 100;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--third-color);
+    transition: .5s;
 }
