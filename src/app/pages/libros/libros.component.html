@@ -12,7 +12,7 @@
                 <p>NO HAY LIBROS DISPONIBLES</p>
             </div>
            
-            <li *ngFor="let book of myBooks" class="libros">
+            <li class="libros" *ngFor="let book of myBooks; let i = index; let impar = odd; let par = even;">
 
                 <div class="card">
                     <div class="cardHeader">
@@ -27,8 +27,8 @@
                         <p>Ref-{{book.id_book}}</p>
                     </div>
                     <div class="cardBuy">
-                        <p>{{book.price}}€</p>
-                        <button type="button" class="button">Comprar</button>
+                        <p>{{book.price.toFixed(2)}}€</p>
+                        <button type="button" class="button" [ngClass]="{standard:impar, irregular:par}">Comprar</button>
                     </div>
                 </div>
 
