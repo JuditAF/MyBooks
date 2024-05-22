@@ -14,13 +14,25 @@ main {
     align-items: center;
 }
 
+.vistaLibros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+
+.libros {
+    list-style-type: none;
+}
+
 .cardContainer {
     width: 100vw;
     font-size: .5rem;
     font-weight: 100;
     letter-spacing: .1rem;
     display: flex;
-    flex-flow: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 8vh;
@@ -31,11 +43,6 @@ main {
     border: 3px solid var(--primer-color);
     border-radius: .8rem;
     box-shadow: 10px 5px 5px black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: center;
-    align-items: center;
     margin: 0 8vh 9vh 8vh;
 }
 
@@ -57,16 +64,15 @@ main {
 
 .imgLibro {
     width: 12vw;
+    height: 34vh;
     border: .5px dashed var(--fourth-color);
 }
 
 h2 {
-    font-size: .4rem;
-    cursor: pointer;
-}
-
-h2:hover {
-    color: red;
+    font-size: .7rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    margin-bottom: 1.5rem;
 }
 
 h3 {
@@ -87,6 +93,16 @@ hr {
     justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
+}
+
+.cardMain h2 {
+    font-size: .4rem;
+    cursor: pointer;
+    margin: .5rem;
+}
+
+.cardMain h2:hover {
+    color: red;
 }
 
 span {

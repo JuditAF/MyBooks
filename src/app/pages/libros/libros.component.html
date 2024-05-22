@@ -4,24 +4,31 @@
    
     <section class="cardContainer">
 
-        <div class="card">
-            <div class="cardHeader">
-                <img src="{{myBooks[0].photo}}" alt="" class="imgLibro">
-                <h3>{{myBooks[0].type}}</h3>
-                <p> (Tapa blanda)</p>
-                <hr>
-            </div>
-            <div class="cardMain">
-                <h2>{{myBooks[0].title}}</h2>
-                <span>Autor: {{myBooks[0].author}}</span>
-                <p>Ref-{{myBooks[0].id_book}}</p>
-            </div>
-            <div class="cardBuy">
-                <p>{{myBooks[0].price}}€</p>
-                <button type="button" class="button">Comprar</button>
-            </div>
+        <h2>Libros en Existencias</h2>
 
-        </div>
+        <ul class="vistaLibros">
+           
+            <li *ngFor="let book of myBooks" class="libros">
+                <div class="card">
+                    <div class="cardHeader">
+                        <img src="{{book.photo}}" alt="" class="imgLibro">
+                        <h3>{{book.type}}</h3>
+                        <p> (Tapa blanda)</p>
+                        <hr>
+                    </div>
+                    <div class="cardMain">
+                        <h2>{{book.title}}</h2>
+                        <span>Autor: {{book.author}}</span>
+                        <p>Ref-{{book.id_book}}</p>
+                    </div>
+                    <div class="cardBuy">
+                        <p>{{book.price}}€</p>
+                        <button type="button" class="button">Comprar</button>
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
 
     </section>
 

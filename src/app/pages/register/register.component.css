@@ -1,5 +1,5 @@
 
-body {
+main {
     width: 100vw;
     color: var(--primer-color);
     background: url(../../../assets/biblioteca.jpeg);
