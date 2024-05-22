@@ -1,6 +1,6 @@
-<app-header></app-header>
 
-<body>
+
+<main>
 
     <div class="container">
 
@@ -53,12 +53,12 @@
 
             <form action="">
 
-                <input type="text" placeholder="Nombre" id="nameNew" #nuevoNombre ([(ngModel)]="myUser.name")]>
-                <input type="text" placeholder="Apellidos" id="lastName" #nuevoApellido ([(ngModel)]="myUser.last_name")]>
-                <input type="text" placeholder="Correo" id="mail" #nuevoEmail ([(ngModel)]="myUser.email")]>
-                <input type="text" placeholder="Url" id="Url" #nuevoFoto ([(ngModel)]="myUser.photo")]>
+                <input type="text" placeholder="Nombre" id="nameNew" #nuevoNombre>
+                <input type="text" placeholder="Apellidos" id="lastName" #nuevoApellido>
+                <input type="text" placeholder="Correo" id="mail" #nuevoEmail>
+                <input type="text" placeholder="Url" id="Url" #nuevaFoto>
                 <div class="boton">
-                    <button type="button" (click)="modificar(nuevoNombre.value)">Modificar</button>
+                    <button type="button" (click)="modificar(nuevoNombre.value, nuevoApellido.value, nuevoEmail.value, nuevaFoto.value)">Modificar</button>
                 </div>
                 
             </form>
@@ -67,6 +67,4 @@
 
     </div>
 
-</body>
-
-<app-footer></app-footer>
+</main>
