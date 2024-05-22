@@ -16,10 +16,9 @@ constructor () {
   
 }
 
-public modificar (nuevoNombre: String, nuevoApellido: String, nuevoEmail: String, nuevaFoto: String) {
-  this.myUser = new User (3, nuevoNombre, nuevoApellido, nuevoEmail, nuevaFoto, "hola");
-  console.log(this.myUser.name);
-
+  public modificar (nuevoNombre: string, nuevoApellido: string, nuevoEmail: string, nuevaFoto: string) {
+    this.myUser = new User (3, nuevoNombre, nuevoApellido, nuevoEmail, nuevaFoto, "hola");
+    console.log(this.myUser.name);
 }
 
 }
