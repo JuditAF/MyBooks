@@ -11,6 +11,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { LibrosComponent } from './pages/libros/libros.component';
+import { PipeReferencePipe } from './pipes/pipe-reference.pipe';
 
 
 
@@ -23,7 +24,8 @@ import { LibrosComponent } from './pages/libros/libros.component';
     FormRegisterComponent,
     RegisterComponent,
     ProfileComponent,
-    LibrosComponent
+    LibrosComponent,
+    PipeReferencePipe
   ],
   imports: [
     BrowserModule,

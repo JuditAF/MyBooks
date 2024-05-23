@@ -237,6 +237,10 @@ form .groupInput:nth-last-child(2) {
     color: var(--eighth--color);
 }
 
+.formBook .groupInput input:focus {
+    border: 3.5px solid var(--sixth-color);
+}
+
 .formBook .groupInput i {
     font-size: .5rem;
     color: var(--eighth--color);
@@ -245,8 +249,66 @@ form .groupInput:nth-last-child(2) {
     margin-top: .3rem;
 }
 
+.formBook .quantity i {
+    font-size: .5rem;
+    color: var(--eighth--color);
+    position: absolute;
+    margin-left: -6.3rem;
+    margin-top: .3rem;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.formBook .quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formBook .quantity button {
+    border-radius: 50%;
+}
+
+.formBook .quantity #decrement{
+    width: .7rem;
+    height: .7rem;
+    font-size: .4rem;
+    margin-top: .2rem;
+    padding-left: .5vh;
+    position: absolute;
+    transform: translate(-13.9vw);
+    background-color: var(--sixth-color);
+    color: var(--eighth--color);
+}
+
+.formBook .quantity #decrement:hover {
+    cursor: pointer;
+    background-color: var(--eighth--color);
+    color: var(--sixth-color);
+}
+
+.formBook .quantity #increment{
+    width: .7rem;
+    height: .7rem;
+    font-size: .4rem;
+    margin-top: .2rem;
+    padding-left: .5vh;
+    position: absolute;
+    transform: translate(13.9vw);
+    background-color: var(--sixth-color);
+    color: var(--eighth--color);
+}
+
+.formBook .quantity #increment:hover {
+    cursor: pointer;
+    background-color: var(--eighth--color);
+    color: var(--sixth-color);
+}
+
 .formBook button {
-    width: 25vw;
+    width: 27vw;
     height: 8vh;
     font-size: .5rem;
     font-weight: 100;

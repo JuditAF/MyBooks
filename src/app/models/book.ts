@@ -11,11 +11,11 @@ export class Book {
                 public price: number,
                 public photo: string) { }
 
-    public addBook() {
+    // public addBook() {
 
-        let myBook = new Book(this.id_book, this.id_user=0, this.title, this.type, this.author, this.price, this.photo);
-        return this.myBooks.push(myBook);
+    //     let myBook = new Book(this.id_book, this.id_user=0, this.title, this.type, this.author, this.price, this.photo);
+    //     return this.myBooks.push(myBook);
                 
-    }
+    // }
 
 }
