@@ -18,12 +18,5 @@ export class CardComponent {
 
   }
 
-  public addBook(idBook:number, idUser:number, title:string, tipo:string, author:string, price:number, photo:string) {
-
-    let myBook = new Book(idBook, idUser, title, tipo, author, price, photo);
-    return this.myBooks.push(myBook);
-            
-  }
 }
 
-}
