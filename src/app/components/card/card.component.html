@@ -1,7 +1,11 @@
 
-<div class="card">
+<div class="card" #card *ngFor="let book of myBooks; let i = index; let impar = odd; let par = even;">
     <div class="cardHeader">
-        <img src="{{book.photo}}" alt="" class="imgLibro">
+        <div class="vistaImg">
+            <img src="{{book.photo}}" alt="" class="imgLibro">
+            <button type="button" id="delete" #delete (click)="delete(i)"> x </button>
+        </div>
+        
         <h3>{{book.type}}</h3>
         <p> (Tapa blanda)</p>
         <hr>
@@ -13,6 +17,6 @@
     </div>
     <div class="cardBuy">
         <p>{{book.price.toFixed(2)}}€</p>
-        <button type="button" class="button">Comprar</button>
+        <button type="button" class="button" [ngClass]="{standard:impar, irregular:par}" en button cardbuy>Comprar</button>
     </div>
 </div>

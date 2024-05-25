@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from './models/book';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyBooks';
+  public book : Book;
+  public myBooks: Book[];
 }

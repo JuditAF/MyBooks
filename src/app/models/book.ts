@@ -3,13 +3,14 @@ export class Book {
     public myBook: Book
     public myBooks: Book[]
 
-    constructor(public id_book: number = 0,
-                public id_user: number = 0,
+    constructor(
                 public title: string,
                 public type: string,
                 public author: string,
                 public price: number,
-                public photo: string) { }
+                public photo: string,
+                public id_book: number = 0,
+                public id_user: number = 0) { }
 
     // public addBook() {
 
