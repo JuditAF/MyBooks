@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { LibrosComponent } from './pages/libros/libros.component';
 import { PipeReferencePipe } from './pipes/pipe-reference.pipe';
 import { CardComponent } from './components/card/card.component';
+import { AddBookComponent } from './pages/add-book/add-book.component';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
 
 
 
@@ -27,7 +29,9 @@ import { CardComponent } from './components/card/card.component';
     ProfileComponent,
     LibrosComponent,
     PipeReferencePipe,
-    CardComponent
+    CardComponent,
+    AddBookComponent,
+    UpdateBookComponent
   ],
   imports: [
     BrowserModule,
