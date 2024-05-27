@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Book } from 'src/app/models/book';
 
 @Component({
@@ -9,11 +9,13 @@ import { Book } from 'src/app/models/book';
 export class LibrosComponent {
 
   public myBooks: Book[];
+  public book: Book= new Book("Código Limpio", "Lenguaje Programación", "Robert C. Martin", 47.58, "https://m.media-amazon.com/images/I/61orja1+P7L._AC_UF894,1000_QL80_.jpg", 34533, 11);
 
   constructor() {
 
     this.myBooks = [
       new Book("El guerrero a la sombra del cerezo", "Novela Histórica", "David B.Gil", 19.85, "https://m.media-amazon.com/images/I/91AOK0vUY+L._AC_UF894,1000_QL80_.jpg", 30305, 7),
+      new Book("Código Limpio", "Lenguaje Programación", "Robert C. Martin", 47.58, "https://m.media-amazon.com/images/I/61orja1+P7L._AC_UF894,1000_QL80_.jpg", 34533, 11),
       new Book("Trilogía Africanus", "Novela Histórica", "Santiago Posteguillo", 75.33, "https://quelibroleo.com/images/libros/libro_1353882344.jpg", 31897, 5),
       new Book("Determined", "Divulgación Científica", "Robert sapolsky", 26.60, "https://m.media-amazon.com/images/I/81PX0uhxQ3L._AC_UF894,1000_QL80_.jpg", 30621, 2),
       new Book("Alex", "Novela Negra", "Pierre Lemaitre", 20.80, "https://www.libreriaalberti.com/media/img/portadas/_visd_0000JPG01NQ5.jpg", 37640, 6),
@@ -32,14 +34,14 @@ export class LibrosComponent {
             
   }
 
-  // public delete() {
+  public delete(indice:number) {
+  
+    this.myBooks = this.myBooks.filter(
+      book => book.id_book !== indice
+    );
 
-  //   this.myBooks.filter(i => index = i)
+    console.log(this.myBooks);
     
-  // }
-
-  public delete(i:number) {
-    this.myBooks.splice(i,1);
   }
+
 }
-// *ngFor="let book of myBooks; let i = index; let impar = odd; let par = even;"

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Book } from 'src/app/models/book';
 
 @Component({
@@ -8,24 +7,23 @@ import { Book } from 'src/app/models/book';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+  [x: string]: any;
 
-  public book : Book;
-  public myBooks: Book[];
+  @Input() book: Book;
+  @Input() par: string;
+  @Input() impar: string;
 
-  public addBook(idBook:number, idUser:number, title:string, tipo:string, author:string, price:number, photo:string) {
 
-    let myBook = new Book(title, tipo, author, Number(price), photo, idBook, idUser);
-    this.myBooks.push(myBook);
-            
-  }
+ @Output() eliminarCard = new EventEmitter<Number>();
 
-  public delete(i:number) {
-
-    this.myBooks.splice(i,1);
+  constructor() {
     
   }
 
+  public borrar(indice:number) {
+  
+    this.eliminarCard.emit(indice);
+  
+  }
+
 }
-
-
-// [ngClass]="{standard:impar, irregular:par}" en button cardbuy

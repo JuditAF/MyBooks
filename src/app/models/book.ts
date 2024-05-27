@@ -1,6 +1,6 @@
 export class Book {
 
-    public myBook: Book
+    public book: Book
     public myBooks: Book[]
 
     constructor(
