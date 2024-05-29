@@ -10,11 +10,11 @@ import { Book } from 'src/app/models/book';
 export class LibrosComponent {
 
   public myBooks: Book[];
-  public mybook: Book= new Book("Código Limpio", "Lenguaje Programación", "Robert C. Martin", 47.58, "https://m.media-amazon.com/images/I/61orja1+P7L._AC_UF894,1000_QL80_.jpg", 34533, 11);
+  
 
-  constructor(private booksService: BooksService) {
+  constructor(public booksService: BooksService) {
 
-    this.books = this.booksService.getAll();
+    this.myBooks = this.booksService.getAll();
 
   }
 

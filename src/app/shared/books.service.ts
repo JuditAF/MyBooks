@@ -26,38 +26,47 @@ export class BooksService {
     return this.books;
   }
 
-  // public getAll(): Book[]{
-  //   this.books = this.booksService.books;
-  // }; 
-
   public getOne(id_libro: number): Book{
-    // let id_libro = this.book.id_book;
-    // this.books.slice(book.id_book, book.id_book + 1);
+    if (this.book.id_book == id_libro) {
+      this.books.find(book => book.id_book === id_libro);
+    }
     return this.books[id_libro];
   };
-
-  // public getOne(id_libro: number): Book {
-
-  //     this.books.get(){
-  //       for(let libro of books) {
-  //         if(this.book.id_book === id_libro) {
-  //             return libro;}
-  //         }
-  //     }
-  // }
 
   public add(book:Book): void {
     this.books.push(book);
   };
 
   public edit(book: Book) {
-    this.books = this.books.splice(book.id_book, 1, book);
-  };
+    if (book.id_book){
+    //   let index = this.books.findIndex(function(book){
+    //     return book.id_book === id_book;
+    //   })
+    let index = this.books.indexOf(book);
+    this.books = this.books.splice(index, 1, book);
+    return this.books;
+    };
+  }
 
-  public delete(indice: number) {
-    this.books = this.books.filter(
-      book => book.id_book !== indice
-    );
-  };
+  public delete(id_book: number) {
+    if (id_book){
+      let index = this.books.findIndex(function(book){
+        return book.id_book === id_book;
+      })
+      this.books.splice(index,1)
+      return this.books;
+    };
+  }
+
+  public buscar(id_book) {
+    if (id_book){
+      let id_libro = this.books.findIndex(function(){
+        return this.books.getOne(id_libro);
+      })
+    }
+    // else {
+    //   this.books.getAll();
+    // };
+  }
 
 }

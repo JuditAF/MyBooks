@@ -9,17 +9,9 @@
         <div class="buscador">
             <input id="buscador" type="text"/>
             <div class="acciones">
-                <button>
-                    <span class="iconoBusca">
+                <button class="buscar">
                         <!-- (click)="buscar(book.id_book)" -->
-                        <i class="fa-solid fa-book"></i>lupa Búsqueda
-                    </span>
-                </button>
-                <button>
-                    <span class="iconoBusca">escanear idBook</span>
-                </button>
-                <button>
-                    <span class="iconoBusca">micrófono</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
         </div>
@@ -30,9 +22,9 @@
                 <p>NO HAY LIBROS DISPONIBLES</p>
             </div>
            
-            <li class="libros" *ngFor="let book of myBooks; let i = index; let impar = odd; let par = even;" [i]="i" [par]="par" [impar]="impar" [myBooks]="myBooks">
+            <li class="libros" *ngFor="let book of myBooks; let i = index; let impar = odd; let par = even;">
 
-                <app-card [book]="book" (eliminarCard)="delete($event)" (addCard)="addBook($event)" [ngClass]="{standard:impar, irregular:par}"></app-card>
+                <app-card [book]="book" [par]="par" [impar]="impar" (eliminarCard)="delete($event)" (addCard)="addBook($event)"></app-card>
 
             </li>
 

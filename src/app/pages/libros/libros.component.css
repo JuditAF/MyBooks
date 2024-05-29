@@ -16,20 +16,42 @@ main {
 
 .buscador {
     width: 100vw;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.buscar {
+    width: 2.5vw;
+    height: 5vh;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.buscar:hover {
+    background-color: var(--eighth--color);
+}
+
+.buscar i {
+    font-size: .45rem;
+    color: var(--fourth-color);
+    position: absolute;
+    margin: .05rem;
+}
+
 #buscador {
     width: 30vw;
     height: 5vh;
-    color: var(--eighth--color);
+    color: var(--first-color);
     font-size: .4rem;
     font-weight: 100;
     letter-spacing: .05rem;
     padding: .3rem;
-    background-color: var(--sixth-color);
+    background-color: rgb(170, 13, 13, .7);
 }
 
 .iconoBusca i {
