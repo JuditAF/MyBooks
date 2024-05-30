@@ -31,7 +31,17 @@ main {
     align-items: center;
     position: relative;
     background-color: var(--first-color);
-    box-shadow: 10px 10px 5px #aaaaaa;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    line-height: 30px;
+    box-shadow: inset -2px -2px 2px rgb(255, 255, 255, .2),
+                inset 2px 5px 15px rgb(0, 0, 0, .5);
+}
+
+.buscar:active { 
+    box-shadow: inset 2px 2px 2px rgb(170, 13, 13, .2),
+                inset -2px -5px 15px rgb(0, 0, 0, .5);
 }
 
 .buscar:hover {
@@ -54,7 +64,10 @@ main {
     letter-spacing: .05rem;
     padding: .3rem;
     background-color: rgb(170, 13, 13, .7);
+    border-radius: 10px;
     box-shadow: 8px 8px 4px #aaaaaa;
+    outline: none;
+    border: none;
 }
 
 .iconoBusca i {

@@ -16,17 +16,42 @@ export class CardComponent {
 
 
  @Output() eliminarCard = new EventEmitter<Number>();
+ @Output() buscarCard = new EventEmitter<Number>();
+//  @Output() aumentarNum = new EventEmitter<Number>();
+//  @Output() disminuirNum = new EventEmitter<Number>();
 
   constructor(private booksService: BooksService) {}
 
   nuevoLibro(title: string, type: string, author: string, price: number, photo: string, id_book: number, id_user: number) {
     this.booksService.book = new Book (title, type, author, price, photo, id_book, id_user);
-  }
+  };
 
-  public borrar(indice:number) {
+  // public borrar(indice:number) {
   
-    this.eliminarCard.emit(indice);
+  //   this.eliminarCard.emit(indice);
   
-  }
+  // };
+
+  // public buscar(id_book: number) {
+
+  //   this.buscarCard.emit(id_book);
+
+  // };
+
+  // public aumentar(idBook: number) {
+  //   this.aumentarNum.emit(idBook);
+  // };
+
+  // public disminuir(idBook: number) {
+  //   this.disminuirNum.emit(idBook);
+  // };
+
+  // public aumentarUser(idUser: number) {
+  //   return idUser + 1;
+  // };
+
+  // public disminuirUser(idUser: number) {
+  //   return idUser - 1;
+  // };
 
 }

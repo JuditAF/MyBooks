@@ -23,20 +23,36 @@ export class AddBookComponent {
             
   }
 
-  public aumentar(idBook) {
-    return idBook + 1;
-  };
+  // public aumentar(idBook: number) {
+  //   return idBook + 1;
+  // };
 
-  public disminuir(idBook) {
-    return idBook - 1;
-  };
+  // public disminuir(idBook: number) {
+  //   return idBook - 1;
+  // };
 
-  public aumentarUser(idUser) {
-    return idUser + 1;
-  };
+  // public aumentarUser(idUser: number) {
+  //   return idUser + 1;
+  // };
 
-  public disminuirUser(idUser) {
-    return idUser - 1;
+  // public disminuirUser(idUser: number) {
+  //   return idUser - 1;
+  // };
+
+  inputNum = document.getElementById("inNum");
+
+  public buttNum (inNum) {
+    let id = inNum.getAttribute("id");
+    let min = this.inputNum.getAttribute("min");
+    let max = this.inputNum.getAttribute("max");
+    let step = this.inputNum.getAttribute("step");
+    let val = this.inputNum.getAttribute("value");
+    let calStep = (id == "increment") ?  (Number(step)*1): (Number(step)*-1);
+    let newValue = parseInt(val) + calStep;
+
+    if (newValue >= Number(min) && newValue <= Number(max)) {
+      this.inputNum.setAttribute("value", "newValue");
+    }
   };
 
 }

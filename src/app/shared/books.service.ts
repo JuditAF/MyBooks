@@ -15,7 +15,7 @@ export class BooksService {
     new Book("Determined", "Divulgación Científica", "Robert sapolsky", 26.60, "https://m.media-amazon.com/images/I/81PX0uhxQ3L._AC_UF894,1000_QL80_.jpg", 30621, 2),
     new Book("Alex", "Novela Negra", "Pierre Lemaitre", 20.80, "https://www.libreriaalberti.com/media/img/portadas/_visd_0000JPG01NQ5.jpg", 37640, 6),
     new Book("El arte de la guerra", "Filosofía", "sun Tzu", 17.95, "https://m.media-amazon.com/images/I/61Im39L4o1L._AC_UF894,1000_QL80_.jpg", 39142, 9),
-    new Book("Trilogía Dune", "Ciencia Ficción", "Frank Herbert", 59.71, "https://www.libreriafabula.com/imagenes_grandes/9788466/978846636340.JPG"),
+    new Book("Trilogía Dune", "Ciencia Ficción", "Frank Herbert", 59.71, "https://www.libreriafabula.com/imagenes_grandes/9788466/978846636340.JPG", 32087, 1),
     new Book("El barco de Teseo", "Narrativa Fantástica", "J.J. Abrams", 49, "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcaCbDX4HM9ux9Amx44JgtlepwI-bzP56OP5G7XoANFg7S1YpG1f7LrR6lliwuRD226afnRrt41BITcJlNpIckV-QEk8R1sex4DQfsBtNnP09qkhiQ86DbtD1So2nvnNdQPWbjVO89NK9YF0sN-3S_AYcGv08BjMROodf55BxZ-2J-JqUH81IPYh6aJPTx/s764/S.-El-barco-de-Teseo-550x764.jpg", 36228, 1),
     new Book("Poesía Completa", "Poesía Extranjera", "Matsuo Basho", 24.7, "https://m.media-amazon.com/images/I/51lzs8eQaRL._AC_UF894,1000_QL80_DpWeblab_.jpg", 33845, 3)
   ];
@@ -58,7 +58,7 @@ export class BooksService {
     };
   }
 
-  public buscar(id_book) {
+  public buscar(id_book: number) {
     if (id_book){
       let id_libro = this.books.findIndex(function(){
         return this.books.getOne(id_libro);

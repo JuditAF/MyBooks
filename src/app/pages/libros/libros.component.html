@@ -7,10 +7,9 @@
         <h2>Libros en Existencias</h2>
 
         <div class="buscador">
-            <input id="buscador" type="text" placeholder="Busca tu Libro por su idBook"/>
+            <input id="buscador" #idLookFor type="text" placeholder="Busca tu Libro por su idBook"/>
             <div class="acciones">
-                <button class="buscar">
-                        <!-- (click)="buscar(book.id_book)" -->
+                <button (buscarCard)="buscar($event)" (click)="buscar(idLookFor)" class="buscar">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
