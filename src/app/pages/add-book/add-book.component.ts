@@ -16,18 +16,27 @@ export class AddBookComponent {
 
   constructor(private booksService: BooksService){}
 
-  // public addBook(idBook:number, idUser:number, title:string, tipo:string, author:string, price:number, photo:string) {
-
-  //   let myBook = new Book(title, tipo, author, Number(price), photo, idBook, idUser);
-  //   this.addCard.emit(myBook);
-            
-  // }
-
   public addBook(idBook:number, idUser:number, title:string, tipo:string, author:string, price:number, photo:string) {
 
     let book = new Book(title, tipo, author, Number(price), photo, idBook, idUser);
     this.booksService.add(book);
             
   }
+
+  public aumentar(idBook) {
+    return idBook + 1;
+  };
+
+  public disminuir(idBook) {
+    return idBook - 1;
+  };
+
+  public aumentarUser(idUser) {
+    return idUser + 1;
+  };
+
+  public disminuirUser(idUser) {
+    return idUser - 1;
+  };
 
 }

@@ -131,6 +131,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .formBook .quantity button {
     border-radius: 50%;
+    filter: drop-shadow(0 0 0.75rem rgb(170, 13, 13));
 }
 
 .formBook .quantity #decrement{

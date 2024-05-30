@@ -30,6 +30,8 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: var(--first-color);
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .buscar:hover {
@@ -52,6 +54,7 @@ main {
     letter-spacing: .05rem;
     padding: .3rem;
     background-color: rgb(170, 13, 13, .7);
+    box-shadow: 8px 8px 4px #aaaaaa;
 }
 
 .iconoBusca i {

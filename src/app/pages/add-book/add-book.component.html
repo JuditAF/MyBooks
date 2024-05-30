@@ -8,20 +8,16 @@
 
             <div class="groupInput quantity">
                 <i class="fa-solid fa-book"></i>
-                <button type="button" id="decrement"> - </button> 
-                <!-- (click)="idBook=idBook--" -->
+                <button type="button" (click)="disminuir(idBook)" id="decrement"> - </button> 
                 <input #idBook type="number" min="300000" max="400000" step="1" value="300000" placeholder="id Libro" required/>
-                <button type="button" id="increment"> + </button>
-                <!-- (click)="idBook=idBook++" -->
+                <button type="button" (click)="aumentar(idBook)" id="increment"> + </button>
             </div>
 
             <div class="groupInput quantity">
                 <i class="fa-solid fa-user-astronaut"></i>
-                <button type="button" id="decrement"> - </button>
-                <!-- (click)="idUser=idUser--" -->
+                <button type="button" (click)="disminuirUser(idUser)" id="decrement"> - </button>
                 <input #idUser type="number" min="1" max="100" step="1" placeholder="id Usuario"/>
-                <button type="button" id="increment"> + </button>
-                <!-- (click)="idUser=idUser++" -->
+                <button type="button" (click)="aumentarUser(idUser)" id="increment"> + </button>
             </div>
 
             <div class="groupInput">
