@@ -45,16 +45,26 @@ export class BooksService {
 
   };
 
-  public delete(id_book: number) {
+  // public delete(id_book: number) {
 
-    if (id_book){
-      let index = this.books.findIndex(function(book){
-        return book.id_book === id_book;
-      })
+  //   if (id_book){
+  //     let index = this.books.findIndex(function(book){
+  //       return book.id_book === id_book;
+  //     })
 
-      this.books.splice(index,1)
-      return this.books;
-    };
+  //     this.books.splice(index,1)
+  //     return this.books;
+  //   };
+  // }
+
+  public delete(indice:number) {
+  
+    this.books = this.books.filter(
+      book => book.id_book !== Number(indice)
+    );
+
+    console.log(this.books);
+    
   }
 
 }

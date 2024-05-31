@@ -16,6 +16,8 @@ import { CardComponent } from './components/card/card.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
 import { BooksService } from './shared/books.service';
+import { LoginComponent } from './pages/login/login.component';
+import { FormLoginComponent } from './components/form-login/form-login.component';
 
 
 
@@ -32,7 +34,9 @@ import { BooksService } from './shared/books.service';
     PipeReferencePipe,
     CardComponent,
     AddBookComponent,
-    UpdateBookComponent
+    UpdateBookComponent,
+    LoginComponent,
+    FormLoginComponent
   ],
   imports: [
     BrowserModule,
