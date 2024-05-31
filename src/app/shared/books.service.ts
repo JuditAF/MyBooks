@@ -6,8 +6,6 @@ import { Book } from '../models/book';
 })
 export class BooksService {
 
-  public book: Book;
-
   private books: Book[] = [
     new Book("El guerrero a la sombra del cerezo", "Novela Histórica", "David B.Gil", 19.85, "https://m.media-amazon.com/images/I/91AOK0vUY+L._AC_UF894,1000_QL80_.jpg", 30305, 7),
     new Book("Código Limpio", "Lenguaje Programación", "Robert C. Martin", 47.58, "https://m.media-amazon.com/images/I/61orja1+P7L._AC_UF894,1000_QL80_.jpg", 34533, 11),
@@ -27,10 +25,7 @@ export class BooksService {
   }
 
   public getOne(id_libro: number): Book{
-    if (this.book.id_book == id_libro) {
-      this.books.find(book => book.id_book === id_libro);
-    }
-    return this.books[id_libro];
+    return this.books.find(book => book.id_book === id_libro);
   };
 
   public add(book:Book): void {
@@ -38,35 +33,28 @@ export class BooksService {
   };
 
   public edit(book: Book) {
-    if (book.id_book){
-    //   let index = this.books.findIndex(function(book){
-    //     return book.id_book === id_book;
-    //   })
-    let index = this.books.indexOf(book);
-    this.books = this.books.splice(index, 1, book);
-    return this.books;
-    };
-  }
+   
+    let i = book.id_book;
+    let index = this.books.findIndex( myBook => myBook.id_book == i);
+    console.log(index);
+    
+    if (index){
+      this.books[index] = book;
+      return this.books;
+    }
+
+  };
 
   public delete(id_book: number) {
+
     if (id_book){
       let index = this.books.findIndex(function(book){
         return book.id_book === id_book;
       })
+
       this.books.splice(index,1)
       return this.books;
     };
-  }
-
-  public buscar(id_book: number) {
-    if (id_book){
-      let id_libro = this.books.findIndex(function(){
-        return this.books.getOne(id_libro);
-      })
-    }
-    // else {
-    //   this.books.getAll();
-    // };
   }
 
 }

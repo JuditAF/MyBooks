@@ -9,7 +9,7 @@
         <div class="buscador">
             <input id="buscador" #idLookFor type="text" placeholder="Busca tu Libro por su idBook"/>
             <div class="acciones">
-                <button (buscarCard)="buscar($event)" (click)="buscar(idLookFor)" class="buscar">
+                <button (click)="buscar(idLookFor.value)" class="buscar">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>

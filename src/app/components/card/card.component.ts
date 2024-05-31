@@ -17,14 +17,11 @@ export class CardComponent {
 
  @Output() eliminarCard = new EventEmitter<Number>();
  @Output() buscarCard = new EventEmitter<Number>();
+
 //  @Output() aumentarNum = new EventEmitter<Number>();
 //  @Output() disminuirNum = new EventEmitter<Number>();
 
   constructor(private booksService: BooksService) {}
-
-  nuevoLibro(title: string, type: string, author: string, price: number, photo: string, id_book: number, id_user: number) {
-    this.booksService.book = new Book (title, type, author, price, photo, id_book, id_user);
-  };
 
   // public borrar(indice:number) {
   

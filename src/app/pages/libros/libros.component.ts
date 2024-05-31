@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component} from '@angular/core';
 import { BooksService } from 'src/app/shared/books.service';
 import { Book } from 'src/app/models/book';
 
@@ -18,8 +18,6 @@ export class LibrosComponent {
 
   }
 
-  books: Book[] = [];
-
   public delete(indice:number) {
   
     this.booksService.delete(indice);
@@ -27,9 +25,17 @@ export class LibrosComponent {
   }
 
   public buscar(id_book: number) {
+    console.log(id_book);
+    
+    if (id_book){
+      this.myBooks = [this.booksService.getOne(Number(id_book))];
+      console.log(this.myBooks);
+    }
 
-    this.booksService.buscar(id_book);
-
-  };
+    else {
+      this.myBooks = this.booksService.getAll();
+    };
+    
+  }
 
 }

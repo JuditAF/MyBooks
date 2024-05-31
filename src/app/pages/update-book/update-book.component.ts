@@ -15,7 +15,7 @@ export class UpdateBookComponent {
 
   constructor(private booksService: BooksService){}
 
-  public editBook(idBook:number, idUser:number, title:string, tipo:string, author:string, price:number, photo:string) {
+  public editBook(title:string, tipo:string, author:string, price:number, photo:string, idBook:number, idUser:number) {
 
     let myBook = new Book(title, tipo, author, Number(price), photo, idBook, idUser);
     this.booksService.edit(myBook);

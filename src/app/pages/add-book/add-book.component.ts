@@ -16,7 +16,7 @@ export class AddBookComponent {
 
   constructor(private booksService: BooksService){}
 
-  public addBook(idBook:number, idUser:number, title:string, tipo:string, author:string, price:number, photo:string) {
+  public addBook(title:string, tipo:string, author:string, price:number, photo:string, idBook:number, idUser:number) {
 
     let book = new Book(title, tipo, author, Number(price), photo, idBook, idUser);
     this.booksService.add(book);
