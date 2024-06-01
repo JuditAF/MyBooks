@@ -4,34 +4,34 @@
 
     <hr>
 
-    <form action="">
+    <form [formGroup]="registerForm" action="">
         
         <div class="field">
-            <input type="text" id="nombre" required placeholder="Nombre" autocomplete="nombre"/>
+            <input formControlName="nombre" type="text" id="nombre" placeholder="Nombre" autocomplete="nombre" required/>
         </div>
 
         <div class="field">
-            <input type="text" id="apellidos" required placeholder="Apellidos" autocomplete="apellidos"/>
+            <input formControlName="apellidos" type="text" id="apellidos" placeholder="Apellidos" autocomplete="apellidos" required/>
         </div>
 
         <div class="field">
-            <input type="email" id="eMail" required placeholder="e-mail" autocomplete="e-mail"/>
+            <input formControlName="email" type="email" id="eMail" placeholder="e-mail" autocomplete="e-mail" required/>
         </div>
 
         <div class="field">
-            <input type="url" id="URL" required placeholder="Url" autocomplete="URL"/>
+            <input formControlName="url" type="url" id="URL" placeholder="Url" autocomplete="URL"required/>
         </div>
 
         <div class="field">
-            <input type="password" id="contraseña" required placeholder="Contraseña" oninput="revisar();" autocomplete="contraseña"/>
+            <input formControlName="password" type="password" id="contraseña" placeholder="Contraseña" oninput="revisar();" required/>
         </div>
 
         <div class="field">
-            <input type="password" id="repetirContraseña" required placeholder="Repetir Contraseña" oninput="revisar();" autocomplete="repetirContraseña"/>
+            <input formControlName="repetirContraseña" type="password" id="repetirContraseña" placeholder="Repetir Contraseña" oninput="revisar();" required/>
         </div>
 
         <div class="field">
-            <button type="button" class="button" onclick="recogerDatos();">Registrarse</button>
+            <button [disabled]="registerForm.invalid" class="button" onclick="register();">Registrarse</button>
         </div>
     </form>
     

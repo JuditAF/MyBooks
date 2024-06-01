@@ -1,6 +1,5 @@
 #contenedor {
     width: 35vw;
-    color: var(--primer-color);
     border: 1px solid var(--primer-color);
     box-shadow: 1px 2px 2px 1px var(--second-color);
     margin: 4vh;
@@ -13,10 +12,12 @@
 h2 {
     margin: 5vh 0 2vh 0;
     font-size: .9rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
 }
 
 hr {
-    width: 80%;
+    width: 90%;
     size: 2vh;
 }
 
@@ -34,20 +35,39 @@ form .field {
     align-content: center;
     align-items: center;
     margin: 2vh;
+    position: relative;
+    
+}
+
+.field i {
+    font-size: .45rem;
+    color: var(--eighth--color);
+    position: absolute;
+    margin-left: -6.8rem;
 }
 
 .field input {
     width: 25vw;
     padding: .5rem 1rem;
     font-size: .5rem;
-    color: var(--seventh-color);
+    color: var(--first-color);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 12px;
     margin-right: 2vw;
-    padding-left: .5rem;
+    padding-left: 1.1rem;
     border: 2.5px solid var(--primer-color);
     background-color: var(--third-color);
     opacity: 80%;
+}
+
+i {
+    margin-left: -7rem;
+    font-size: .5rem;
+    color: var(--first-color);
+}
+
+.field input::placeholder {
+    color: var(--seventh-color);
 }
 
 .button {

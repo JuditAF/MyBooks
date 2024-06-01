@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form-login',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class FormLoginComponent {
 
-  // registrarse(eMail.value, password.value) {};
+ public loginForm: FormGroup;
+
+ constructor (private formBuilder: FormBuilder) {
+  // this.buildForm();
+}
+
+ public acceder (eMail: string, password: string) {
+
+ };
 
 }

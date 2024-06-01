@@ -4,18 +4,20 @@
 
     <hr>
 
-    <form action="">
+    <form [formGroup]="loginForm" action="">
 
         <div class="field">
-            <input type="email" #eMail id="eMail" placeholder="e-mail" autocomplete="e-mail" required/>
+            <input type="email" #eMail formControlName="email" id="eMail" placeholder="E-mail" autocomplete="e-mail" required/>
+            <i class="fa-regular fa-envelope"></i>
         </div>
 
         <div class="field">
-            <input type="password" #password id="password" placeholder="Contraseña" required/>
+            <input type="password" #password formControlName="password" id="password" placeholder="Contraseña" required/>
+            <i class="fa-solid fa-key"></i>
         </div>
 
         <div class="field">
-            <button class="button" onclick="registrarse(eMail.value, password.value);">Registrarse</button>
+            <button class="button" onclick="acceder(eMail.value, password.value);" [disabled]="loginForm.invalid">Acceder</button>
         </div>
     </form>
     

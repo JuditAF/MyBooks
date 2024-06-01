@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form-register',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-register.component.css']
 })
 export class FormRegisterComponent {
+
+public registerForm: FormGroup;
+
+constructor (private formBuilder: FormBuilder) {
+  // this.buildForm();
+}
+
+
+  public register () {
+    
+  };
 
 }
