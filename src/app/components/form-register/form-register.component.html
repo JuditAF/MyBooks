@@ -7,27 +7,46 @@
     <form [formGroup]="registerForm" action="">
         
         <div class="field">
-            <input formControlName="nombre" type="text" id="nombre" placeholder="Nombre" autocomplete="nombre" required/>
+            <input formControlName="nombre" type="text" id="nombre" placeholder="Nombre" autocomplete="nombre" required
+            [ngClass]="{'is-invalid' : (registerForm.get('nombre').dirty || registerForm.get('nombre').touched) && !registerForm.get('nombre').valid}"/>
+            <div *ngIf="registerForm.get('nombre').valid" class="invalid">El campo nombre es obligatorio</div> 
         </div>
 
         <div class="field">
-            <input formControlName="apellidos" type="text" id="apellidos" placeholder="Apellidos" autocomplete="apellidos" required/>
+            <input formControlName="apellidos" type="text" id="apellidos" placeholder="Apellidos" autocomplete="apellidos" required
+            [ngClass]="{'is-invalid' : (registerForm.get('apellidos').dirty || registerForm.get('apellidos').touched) && !registerForm.get('apellidos').valid}"/>
+            <div *ngIf="registerForm.get('apellidos').valid" class="invalid">El campo apellido es obligatorio</div>
         </div>
 
         <div class="field">
-            <input formControlName="email" type="email" id="eMail" placeholder="e-mail" autocomplete="e-mail" required/>
+            <input formControlName="email" type="email" id="eMail" placeholder="e-mail" autocomplete="e-mail" required
+            [ngClass]="{'is-invalid' : (registerForm.get('email').dirty || registerForm.get('email').touched) && !registerForm.get('email').valid}"/>
+            <div *ngIf="registerForm.get('apellidos').valid" class="invalid">
+                <div *ngIf="registerForm.get('email').errors.required" class="invalid">El campo e-mail es obligatorio</div>
+                <div *ngIf="registerForm.get('email').errors.email" class="invalid">Dirección e-mail incorrecta</div>
+            </div>
         </div>
 
         <div class="field">
-            <input formControlName="url" type="url" id="URL" placeholder="Url" autocomplete="URL"required/>
+            <input formControlName="url" type="url" id="URL" placeholder="Url" required
+            [ngClass]="{'is-invalid' : (registerForm.get('url').dirty || registerForm.get('url').touched) && !registerForm.get('url').valid}"/>
+            <div *ngIf="registerForm.get('url').valid" class="invalid">El campo url es obligatorio</div>
         </div>
 
         <div class="field">
-            <input formControlName="password" type="password" id="contraseña" placeholder="Contraseña" oninput="revisar();" required/>
+            <input formControlName="password" type="password" id="contraseña" placeholder="Contraseña" oninput="revisar();" required
+            [ngClass]="{'is-invalid' : (registerForm.get('password').dirty || registerForm.get('password').touched) && !registerForm.get('password').valid}"/>
+            <div *ngIf="registerForm.get('password').valid" class="invalid">El campo contraseña es obligatorio</div>
         </div>
 
         <div class="field">
-            <input formControlName="repetirContraseña" type="password" id="repetirContraseña" placeholder="Repetir Contraseña" oninput="revisar();" required/>
+            <input formControlName="repetirContraseña" type="password" id="repetirContraseña" placeholder="Repetir Contraseña" oninput="revisar();" required
+            [ngClass]="{'is-invalid' : (registerForm.get('password').dirty || registerForm.get('password').touched) && !registerForm.get('password').valid}"/>
+            <div *ngIf="registerForm.get('password').valid" class="invalid">
+                <div *ngIf="registerForm.get('password').errors.required" class="invalid">El campo es obligatorio</div>
+                <div *ngIf="!registerForm.get('password').errors.required &&
+                            registerForm.get('password').errors.matchPassword" class="invalid">El password no coincide</div>
+            </div>
         </div>
 
         <div class="field">

@@ -31,6 +31,7 @@ form {
 
 form .field {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -83,5 +84,37 @@ i {
 
 button:hover {
     background-color: var(--fourth-color);
-    color: var(--primer-color);
+    color: var(--first-color);
 }
+.invalid {
+    border: var(--seventh-color);
+    box-shadow: rgba(170, 13, 13, 0.25) 0px 54px 55px, rgba(170, 13, 13, 0.12) 0px -12px 30px, rgba(170, 13, 13, 0.12) 0px 4px 6px, rgba(170, 13, 13, 0.17) 0px 12px 13px, rgba(170, 13, 13, 0.09) 0px -3px 5px;
+    color: var(--seventh-color);
+    background-color: rgb(255, 255, 255, 0.5);
+    margin: 1.5vh;
+    padding: 1vh;
+    font-size: .25rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
+}
+
+.noCuenta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .3rem;
+    color: var(--first-color);
+}
+
+.noCuenta a {
+    font-size: .3rem;
+    color: var(--seventh-color);
+}
+
+.perfilImg {
+    padding: 8vh 0 0;
+ }
+ 
+ .perfilImg img {
+     width: 22vw;
+ }

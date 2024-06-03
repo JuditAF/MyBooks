@@ -1,5 +1,9 @@
 <div id="contenedor">
 
+    <div class="perfilImg">
+        <img src="../../../assets/iconLogin-removebg.png" alt=""/>
+    </div>
+
     <h2>Accede a tu Perfil</h2>
 
     <hr>
@@ -7,17 +11,29 @@
     <form [formGroup]="loginForm" action="">
 
         <div class="field">
-            <input type="email" #eMail formControlName="email" id="eMail" placeholder="E-mail" autocomplete="e-mail" required/>
+            <input type="email" #eMail formControlName="email" id="eMail" placeholder="E-mail" autocomplete="e-mail" required
+            [ngClass]="{'is-invalid' : (loginForm.get('email').dirty || loginForm.get('email').touched) && !loginForm.get('email').valid}"/>
+            <div *ngIf="loginForm.get('email').valid">
+                <div *ngIf="loginForm.get('email').errors.required" class="invalid">El campo e-mail es obligatorio</div>
+                <div *ngIf="loginForm.get('email').errors.email" class="invalid">Dirección e-mail incorrecta</div>
+            </div>
             <i class="fa-regular fa-envelope"></i>
         </div>
 
         <div class="field">
-            <input type="password" #password formControlName="password" id="password" placeholder="Contraseña" required/>
+            <input type="password" #password formControlName="password" id="password" placeholder="Contraseña" required
+            [ngClass]="{'is-invalid' : (loginForm.get('password').dirty || loginForm.get('password').touched) && !loginForm.get('password').valid}"/>
+            <div *ngIf="loginForm.get('password').valid" class="invalid">El campo contraseña es obligatorio</div>
             <i class="fa-solid fa-key"></i>
         </div>
 
         <div class="field">
             <button class="button" onclick="acceder(eMail.value, password.value);" [disabled]="loginForm.invalid">Acceder</button>
+        </div>
+
+        <div class="noCuenta">
+            ¿No estás registrado?
+            <a routerLink="/register">Regístrate</a>
         </div>
     </form>
     
