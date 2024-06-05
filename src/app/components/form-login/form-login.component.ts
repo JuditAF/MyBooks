@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-form-login',
@@ -9,12 +10,13 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class FormLoginComponent {
 
  public loginForm: FormGroup;
+ public user: User;
 
  constructor (private formBuilder: FormBuilder) {
   this.buildForm();
 }
 
-public buildForm () {
+buildForm () {
 
   const minPassLength = 8;
 
@@ -24,9 +26,22 @@ public buildForm () {
   });
 }
 
+get email() {
+  return this.loginForm.get('email');
+}
+
+get password() {
+  return this.loginForm.get('password');
+}
+
  public acceder (eMail: string, password: string) {
   const user = this.loginForm.value;
   console.log(user);
+  this.loginForm.reset();
  };
+
+//  reset() {
+//   this.loginForm.reset();
+// }
 
 }

@@ -3,7 +3,7 @@
     <div class="cardHeader">
         <div class="vistaImg">
             <img src="{{book.photo}}" alt="" class="imgLibro">
-            <button type="button" id="delete" #delete (click)="borrar(book.id_book)"> x </button>
+            <button type="button" id="delete" (click)="delet(book.id_book)"> x </button>
         </div>
         
         <h3>{{book.type}}</h3>

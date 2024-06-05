@@ -57,7 +57,7 @@ export class BooksService {
   //   };
   // }
 
-  public delete(indice:number) {
+  public delet(indice:number) {
   
     this.books = this.books.filter(
       book => book.id_book !== Number(indice)

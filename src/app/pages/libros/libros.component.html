@@ -23,7 +23,7 @@
            
             <li class="libros" *ngFor="let book of myBooks; let i = index; let impar = odd; let par = even;">
 
-                <app-card [book]="book" [par]="par" [impar]="impar" (eliminarCard)="delete($event)" (addCard)="addBook($event)"></app-card>
+                <app-card [book]="book" [par]="par" [impar]="impar" (eliminarCard)="delet($event)" (addCard)="addBook($event)"></app-card>
 
             </li>
 

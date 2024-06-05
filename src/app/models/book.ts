@@ -3,8 +3,7 @@ export class Book {
     public book: Book
     public myBooks: Book[]
 
-    constructor(
-                public title: string,
+    constructor(public title: string,
                 public type: string,
                 public author: string,
                 public price: number,

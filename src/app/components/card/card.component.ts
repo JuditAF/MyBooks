@@ -23,11 +23,11 @@ export class CardComponent {
 
   constructor(private booksService: BooksService) {}
 
-  // public borrar(indice:number) {
+  public delet(indice:number) {
   
-  //   this.eliminarCard.emit(indice);
+    this.eliminarCard.emit(indice);
   
-  // };
+  };
 
   // public buscar(id_book: number) {
 

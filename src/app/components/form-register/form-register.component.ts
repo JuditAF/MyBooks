@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-form-register',
@@ -9,29 +10,28 @@ import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validator
 export class FormRegisterComponent {
 
 public registerForm: FormGroup;
+public user: User;
 
 constructor (private formBuilder: FormBuilder) {
-  this.buildForm();
+
+  const minPassLength = 8;
+
+  this.registerForm = this.formBuilder.group({
+    
+    nombre: [, Validators.required],
+    apellidos: [, Validators.required],
+    email: [, [Validators.required, Validators.email]],
+    url: [, Validators.required],
+    password : [, [Validators.required, Validators.minLength(minPassLength)]],
+    repetirPassword : [, [Validators.required, Validators.minLength(minPassLength), this.checkPasswords]],
+  
+  });
 }
-
-  public buildForm () {
-
-    const minPassLength = 8;
-
-    this.registerForm = this.formBuilder.group({
-      nombre: [, Validators.required],
-      apellido: [, Validators.required],
-      email: [, [Validators.required, Validators.email]],
-      url: [, Validators.required],
-      password : [, [Validators.required, Validators.minLength(minPassLength)]],
-      repetirPassword : [, [Validators.required, Validators.minLength(minPassLength), this.checkPasswords]],
-    });
-  }
 
   public register () {
     const user = this.registerForm.value;
     console.log(user);
-    
+    this.registerForm.reset();
   };
 
   private checkPasswords (control: AbstractControl){
@@ -42,5 +42,9 @@ constructor (private formBuilder: FormBuilder) {
 
      return res;
   };
+
+//   reset() {
+//     this.registerForm.reset();
+// }
 
 }

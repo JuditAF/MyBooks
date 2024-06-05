@@ -18,9 +18,9 @@ export class LibrosComponent {
 
   }
 
-  public delete(indice:number) {
+  public delet(indice:number) {
   
-    this.booksService.delete(indice);
+    this.booksService.delet(indice);
     
   }
 
