@@ -18,9 +18,13 @@ export class LibrosComponent {
 
   }
 
-  public delet(indice:number) {
+  public delete(id_book:number) {
   
-    this.booksService.delet(indice);
+    this.booksService.delete(id_book);
+    this.myBooks = this.booksService.getAll();
+    console.log(this.booksService.getAll());
+    console.log(this.myBooks);
+    
     
   }
 

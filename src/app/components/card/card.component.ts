@@ -23,9 +23,9 @@ export class CardComponent {
 
   constructor(private booksService: BooksService) {}
 
-  public delet(indice:number) {
+  public delete(id_book:number) {
   
-    this.eliminarCard.emit(indice);
+    this.eliminarCard.emit(id_book);
   
   };
 

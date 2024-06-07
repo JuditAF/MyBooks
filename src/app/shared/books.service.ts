@@ -57,13 +57,21 @@ export class BooksService {
   //   };
   // }
 
-  public delet(indice:number) {
-  
-    this.books = this.books.filter(
-      book => book.id_book !== Number(indice)
+  public delete(id_book:number) {
+
+    let booksFilter : Book[];
+    booksFilter = this.books.filter(
+      book => book.id_book !== Number(id_book)
     );
 
     console.log(this.books);
+
+    if (this.books.length !== booksFilter.length) {
+      this.books = booksFilter;
+      return true;
+    } else {
+      return false;
+    };
     
   }
 
