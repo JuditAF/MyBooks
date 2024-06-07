@@ -23,8 +23,8 @@
         <div class="field">
             <input type="email" class="form-control" placeholder="e-mail" autocomplete="e-mail" formControlName="email"
             [ngClass]="{'is-invalid' : (registerForm.get('email').dirty || registerForm.get('email').touched) && !registerForm.get('email').valid}"/>
-            <small  class="invalid-feedback" *ngIf="!registerForm.get('apellidos').valid && registerForm.get('email').errors.required">El campo e-mail es obligatorio</small>
-            <small class="invalid-feedback" *ngIf="!registerForm.get('apellidos').valid && registerForm.get('email').errors.email">Dede ser una dirección de e-mail válida</small>  
+            <small  class="invalid-feedback" *ngIf="!registerForm.get('email').valid && registerForm.get('email').errors.required">El campo e-mail es obligatorio</small>
+            <small class="invalid-feedback" *ngIf="!registerForm.get('email').valid && registerForm.get('email').errors.email">Dede ser una dirección de e-mail válida</small>  
         </div>
 
         <div class="field">
@@ -49,8 +49,8 @@
         </div>
 
         <div class="field">
-            <button [disabled]="registerForm.invalid" class="button" onclick="register();"
-            [ngClass]="{'button-disabled' : !registerForm.valid}">Registrarse</button>
+            <button [disabled]="registerForm.invalid" class="button" (click)="register();"
+            [ngClass]="{'button-disabled' : registerForm.invalid}">Registrarse</button>
         </div>
 
         <div class="noCuenta">
