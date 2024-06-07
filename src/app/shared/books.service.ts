@@ -66,12 +66,16 @@ export class BooksService {
 
     console.log(this.books);
 
-    if (this.books.length !== booksFilter.length) {
-      this.books = booksFilter;
-      return true;
-    } else {
-      return false;
-    };
+    let resultado: boolean = (this.books.length !== booksFilter.length);
+    this.books = booksFilter;
+    return resultado;
+
+    // if (this.books.length !== booksFilter.length) {
+    //   this.books = booksFilter;
+    //   return true;
+    // } else {
+    //   return false;
+    // };
     
   }
 
