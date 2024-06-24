@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../models/book';
+import { HttpClientModule } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -18,18 +19,23 @@ export class BooksService {
     new Book("Poesía Completa", "Poesía Extranjera", "Matsuo Basho", 24.7, "https://m.media-amazon.com/images/I/51lzs8eQaRL._AC_UF894,1000_QL80_DpWeblab_.jpg", 33845, 3)
   ];
 
-  constructor() { }
+  private url = "http://localhost:3000/books";
+
+  constructor( private http:HttpClientModule ) { }
 
   public getAll(): Book[]{
-    return this.books;
+    return this.books; 
+  //   return this.http.get(this.url + "/")
   }
 
   public getOne(id_libro: number): Book{
     return this.books.find(book => book.id_book === id_libro);
+    // return this.http.get(this.url + "/" + "?id=" + id_libro)
   };
 
   public add(book:Book): void {
     this.books.push(book);
+    // return this.http.post(this.url, book)
   };
 
   public edit(book: Book) {
@@ -42,7 +48,7 @@ export class BooksService {
       this.books[index] = book;
       return this.books;
     }
-
+    // return this.http.put(this.url, book)
   };
 
   // public delete(id_book: number) {
@@ -69,6 +75,7 @@ export class BooksService {
     let resultado: boolean = (this.books.length !== booksFilter.length);
     this.books = booksFilter;
     return resultado;
+    // return this.http.delete(this.url + "/" + "?id=" +  id_book)
 
     // if (this.books.length !== booksFilter.length) {
     //   this.books = booksFilter;
