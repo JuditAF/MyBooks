@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { BooksService } from 'src/app/shared/books.service';
 import { Book } from 'src/app/models/book';
+import { Respuesta } from 'src/app/models/respuesta';
 
 @Component({
   selector: 'app-libros',
@@ -9,21 +10,26 @@ import { Book } from 'src/app/models/book';
 })
 export class LibrosComponent {
 
-  public myBooks: Book[];
-  
+  public books: Book[] = [];
 
-  constructor(public booksService: BooksService) {
+  constructor(public apiService: BooksService) {
 
-    this.myBooks = this.booksService.getAll();
+    this.apiService.books = null;
+
+    this.apiService.getAll().subscribe((respuesta: Respuesta) => {
+      this.apiService.books = respuesta.data;
+    });
 
   }
 
   public delete(id_book:number) {
   
-    this.booksService.delete(id_book);
-    this.myBooks = this.booksService.getAll();
-    console.log(this.booksService.getAll());
-    console.log(this.myBooks);
+    this.apiService.delete(id_book).subscribe((respuesta: Respuesta) => {
+      this.apiService.books = respuesta.data;
+    });
+    // this.books = this.apiService.getAll();
+    // console.log(this.apiService.getAll());
+    // console.log(this.books);
     
     
   }
@@ -32,13 +38,20 @@ export class LibrosComponent {
     console.log(id_book);
     
     if (id_book){
-      this.myBooks = [this.booksService.getOne(Number(id_book))];
-      console.log(this.myBooks);
+      // this.books = [this.apiService.getOne(Number(id_book))];
+      
+      this.apiService.getOne(Number(id_book)).subscribe((respuesta: Respuesta) => {
+        this.apiService.books = respuesta.data;
+      });
+      console.log(this.books);
+      
+    } else {
+      // this.books = this.apiService.getAll()
+      
+      this.apiService.getAll().subscribe((respuesta: Respuesta) => {
+        this.apiService.books = respuesta.data;
+      });
     }
-
-    else {
-      this.myBooks = this.booksService.getAll();
-    };
     
   }
 

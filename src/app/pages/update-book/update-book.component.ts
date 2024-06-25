@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
+import { Respuesta } from 'src/app/models/respuesta';
 
 @Component({
   selector: 'app-update-book',
@@ -13,13 +14,19 @@ export class UpdateBookComponent {
 
   @Output() modifyCard = new EventEmitter<Book>();
 
-  constructor(private booksService: BooksService){}
+  constructor(private apiService: BooksService){}
 
   public editBook(title:string, tipo:string, author:string, price:number, photo:string, idBook:number, idUser:number) {
 
-    let myBook = new Book(title, tipo, author, Number(price), photo, idBook, idUser);
-    this.booksService.edit(myBook);
-            
-  }
+    let book = new Book(title, tipo, author, Number(price), photo, idBook, idUser);
+    // this.booksService.edit(myBook);
 
+    this.apiService.edit(book).subscribe((respuesta: Respuesta)=> {
+
+      this.apiService.books = respuesta.data;
+      console.log(respuesta);
+            
+    });
+
+  }
 }

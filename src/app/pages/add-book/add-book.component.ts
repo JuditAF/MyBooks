@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BooksService } from 'src/app/shared/books.service';
 import { Book } from 'src/app/models/book';
+import { Respuesta } from 'src/app/models/respuesta';
 
 
 @Component({
@@ -14,30 +15,23 @@ export class AddBookComponent {
 
   @Output() addCard = new EventEmitter<Book>();
 
-  constructor(private booksService: BooksService){}
+  constructor(private apiService: BooksService){}
 
   public addBook(title:string, tipo:string, author:string, price:number, photo:string, idBook:number, idUser:number) {
 
     let book = new Book(title, tipo, author, Number(price), photo, idBook, idUser);
-    this.booksService.add(book);
+    console.log(book);
+    
+    // this.booksService.add(book);
+    this.apiService.add(book).subscribe((respuesta: Respuesta)=> {
+      // return this.http.post(this.url, book)
+
+      this.apiService.books = respuesta.data;
+      console.log(respuesta);
+
+    });
             
   }
-
-  // public aumentar(idBook: number) {
-  //   return idBook + 1;
-  // };
-
-  // public disminuir(idBook: number) {
-  //   return idBook - 1;
-  // };
-
-  // public aumentarUser(idUser: number) {
-  //   return idUser + 1;
-  // };
-
-  // public disminuirUser(idUser: number) {
-  //   return idUser - 1;
-  // };
 
   inputNum = document.getElementById("inNum");
 

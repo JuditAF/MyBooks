@@ -17,11 +17,11 @@
 
         <ul class="vistaLibros">
 
-            <div *ngIf="myBooks.length===0" class="nulo">
+            <div *ngIf="books.length===0" class="nulo">
                 <p>NO HAY LIBROS DISPONIBLES</p>
             </div>
            
-            <li class="libros" *ngFor="let book of myBooks; let i = index; let impar = odd; let par = even;">
+            <li class="libros" *ngFor="let book of books; let i = index; let impar = odd; let par = even;">
 
                 <app-card [book]="book" [par]="par" [impar]="impar" (eliminarCard)="delete($event)" (addCard)="addBook($event)"></app-card>
 
