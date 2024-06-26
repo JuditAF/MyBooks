@@ -21,10 +21,8 @@ export class AddBookComponent {
 
     let book = new Book(title, tipo, author, Number(price), photo, idBook, idUser);
     console.log(book);
-    
-    // this.booksService.add(book);
+
     this.apiService.add(book).subscribe((respuesta: Respuesta)=> {
-      // return this.http.post(this.url, book)
 
       this.apiService.books = respuesta.data;
       console.log(respuesta);

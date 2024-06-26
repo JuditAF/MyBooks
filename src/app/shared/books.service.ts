@@ -27,8 +27,6 @@ export class BooksService {
 
   public add(book:Book) {                   // POSTBOOK
 
-    // this.books.push(book);
-
     console.log(book);
    
     return this.http.post(this.url, book);

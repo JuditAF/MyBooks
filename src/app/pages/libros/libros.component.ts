@@ -14,10 +14,11 @@ export class LibrosComponent {
 
   constructor(public apiService: BooksService) {
 
-    this.apiService.books = null;
-
     this.apiService.getAll().subscribe((respuesta: Respuesta) => {
-      this.apiService.books = respuesta.data;
+      this.books = respuesta.data;
+      console.log(respuesta.data);
+      console.log(this.books);
+      
     });
 
   }
@@ -25,31 +26,25 @@ export class LibrosComponent {
   public delete(id_book:number) {
   
     this.apiService.delete(id_book).subscribe((respuesta: Respuesta) => {
-      this.apiService.books = respuesta.data;
+      this.books = respuesta.data;
     });
-    // this.books = this.apiService.getAll();
-    // console.log(this.apiService.getAll());
-    // console.log(this.books);
-    
-    
+   
   }
 
   public buscar(id_book: number) {
     console.log(id_book);
     
     if (id_book){
-      // this.books = [this.apiService.getOne(Number(id_book))];
       
       this.apiService.getOne(Number(id_book)).subscribe((respuesta: Respuesta) => {
-        this.apiService.books = respuesta.data;
+        this.books = respuesta.data;
       });
       console.log(this.books);
       
     } else {
-      // this.books = this.apiService.getAll()
       
       this.apiService.getAll().subscribe((respuesta: Respuesta) => {
-        this.apiService.books = respuesta.data;
+        this.books = respuesta.data;
       });
     }
     

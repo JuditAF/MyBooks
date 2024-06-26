@@ -19,7 +19,6 @@ export class UpdateBookComponent {
   public editBook(title:string, tipo:string, author:string, price:number, photo:string, idBook:number, idUser:number) {
 
     let book = new Book(title, tipo, author, Number(price), photo, idBook, idUser);
-    // this.booksService.edit(myBook);
 
     this.apiService.edit(book).subscribe((respuesta: Respuesta)=> {
 
